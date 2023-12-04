@@ -18,6 +18,8 @@ addTask.addEventListener("click", () => {
   listItem.appendChild(spanItem);
 
   taskList.appendChild(listItem);
+  todoInput.value = "";
+  todoInput.focus();
 
   removeItem.addEventListener("click", () =>
     handleRemoveList(taskList, listItem)
