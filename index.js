@@ -18,8 +18,16 @@ addTask.addEventListener("click", () => {
   removeItem.addEventListener("click", () =>
     handleRemoveList(taskList, listItem)
   );
+
+  spanItem.addEventListener("click", () => handleToggleList(spanItem));
 });
 
 function handleRemoveList(taskList, listItem) {
   taskList.removeChild(listItem);
+}
+
+function handleToggleList(spanItem) {
+  spanItem.classList.contains("done")
+    ? spanItem.classList.remove("done")
+    : spanItem.classList.add("done");
 }
