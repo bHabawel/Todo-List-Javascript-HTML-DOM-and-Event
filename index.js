@@ -10,6 +10,10 @@ addTask.addEventListener("click", () => {
   removeItem.innerHTML = "X";
   spanItem.innerHTML = todoInput.value;
 
+  if (spanItem.innerHTML === "") {
+    return alert("Add a list");
+  }
+
   listItem.appendChild(removeItem);
   listItem.appendChild(spanItem);
 
