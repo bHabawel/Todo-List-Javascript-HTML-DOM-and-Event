@@ -14,4 +14,12 @@ addTask.addEventListener("click", () => {
   listItem.appendChild(spanItem);
 
   taskList.appendChild(listItem);
+
+  removeItem.addEventListener("click", () =>
+    handleRemoveList(taskList, listItem)
+  );
 });
+
+function handleRemoveList(taskList, listItem) {
+  taskList.removeChild(listItem);
+}
